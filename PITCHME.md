@@ -76,7 +76,7 @@ public void customerTest() throws Exception {
 
 
 ---
-## Moking a Service
+## Mokcing a Service
 +++
 ## Implementation
 
@@ -88,7 +88,7 @@ public void customerTest() throws Exception {
 
 ```
 
-++
++++
 ##Unit Test Method
 
 ```java
@@ -108,7 +108,7 @@ public void customerTest() throws Exception {
 ```
 
 ---
-## Moking a Rest API
+## Mocking a Rest API
 
 ``` java
    public String getCustomerBalance(String id){
@@ -116,7 +116,7 @@ public void customerTest() throws Exception {
         return responseEntity.getBody();
     }
 ```
-
++++ 
 ## Unit Test Method
 
 
