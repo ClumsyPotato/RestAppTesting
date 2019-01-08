@@ -109,6 +109,7 @@ public void customerTest() throws Exception {
 
 ---
 ## Mocking a Rest API
++++
 
 ``` java
    public String getCustomerBalance(String id){
@@ -117,8 +118,8 @@ public void customerTest() throws Exception {
     }
 ```
 +++ 
-## Unit Test Method
 
+## Unit Test Method
 
 ``` java
     @Test
