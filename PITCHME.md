@@ -76,7 +76,7 @@ public void customerTest() throws Exception {
 
 
 ---
-## Mokcing a Service
+## Mocking a Service
 +++
 ## Implementation
 
@@ -89,7 +89,7 @@ public void customerTest() throws Exception {
 ```
 
 +++
-##Unit Test Method
+## Unit Test Method
 
 ```java
  @Test
