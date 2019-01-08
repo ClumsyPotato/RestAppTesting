@@ -2,15 +2,11 @@
 
 
 ---
-## Unit Testing a Rest Interface
-
+## Unit Testing a simple Rest Endpoint
 
 
 +++
-## Simple GET Request 
-
-
-Implementation
+## Implementation
 
 ```java
 
