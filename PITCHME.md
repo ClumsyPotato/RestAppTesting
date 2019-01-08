@@ -89,7 +89,7 @@ public void customerTest() throws Exception {
 ```
 
 +++
-## Unit Test Method
+## Unit Test
 
 ```java
  @Test
@@ -109,7 +109,10 @@ public void customerTest() throws Exception {
 
 ---
 ## Mocking a Rest API
+
+
 +++
+#Unit Test
 
 ``` java
    public String getCustomerBalance(String id){
@@ -119,7 +122,7 @@ public void customerTest() throws Exception {
 ```
 +++
 
-## Unit Test Method
+## Unit Test
 
 ``` java
     @Test
@@ -140,4 +143,6 @@ public void customerTest() throws Exception {
 
 ---
 ## Test Driven Development(DDD)
+---
 
+![](assets/img/tdd.jpeg)
