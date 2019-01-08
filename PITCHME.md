@@ -31,20 +31,15 @@ public class CustomerController {
 
 ```java
 
-
 @RunWith(SpringRunner.class)
 @WebMvcTest(value=CustomerController.class, secure = false)
 public class CustomerControllerTest {
 
-
     @Autowired
     private MockMvc mockMvc;
 
-
- @Test
-    public void customerTest() throws Exception {
-
-    }
+    @Test
+    public void customerTest(){}
 }
 ```
 
