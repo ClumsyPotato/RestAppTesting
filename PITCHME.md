@@ -40,7 +40,7 @@ public class CustomerControllerTest {
 ```
 
 +++
-## Unit Test Method
+## Unit Test
 
 
 ```java
@@ -90,7 +90,10 @@ public void customerTest() throws Exception {
 ```java
  @Test
     public void customerTest() throws Exception {
+        
         String expected = "Steve"
+        
+        //mock service
         Mockito.when(customerService.getCustomerName(Mokito.anyLong())).thenReturn(expected);
 
         RequestBuilder requestBuilder = MockMvcRequestBuilders.get(
@@ -102,6 +105,8 @@ public void customerTest() throws Exception {
 
     }
 ```
+@[6,7](if the getCustomerName method gets called with any long value it will return Steve)
+
 
 ---
 ## Mocking a Rest API
@@ -111,8 +116,8 @@ public void customerTest() throws Exception {
 #Unit Test
 
 ``` java
-   public String getCustomerBalance(String id){
-        ResponseEntity<String> responseEntity = restTemplate.getForEntity("http://financialservice:8080/balance/"+id, String.class);
+   public Long getCustomerBalance(int id){
+        ResponseEntity<Long> responseEntity = restTemplate.getForEntity("http://financialservice:8080/balance/"+String.valueOf(id), Long.class);
         return responseEntity.getBody();
     }
 ```
@@ -121,20 +126,22 @@ public void customerTest() throws Exception {
 ## Unit Test
 
 ``` java
-    @Test
+     @Test
     public void customerBalanceTest(){
 
-        String expectedBalance = "100";
+        long expectedBalance = 100;
+        int userid = 4;
 
-
+        //mock rest response
         Mockito
-                .when(restTemplate.getForEntity("http://financialservice:8080/balance/"+expectedBalance ,String.class))
+                .when(restTemplate.getForEntity("http://financialservice:8080/balance/"+String.valueOf(userid)  ,Long.class))
                 .thenReturn(new ResponseEntity<>(expectedBalance, HttpStatus.OK));
 
-        String actualBalance =customerService.getCustomerBalance(expectedBalance);
-        Assert.assertEquals((expectedBalance), actualBalance);
+        Long actualBalance =customerService.getCustomerBalance(userid);
+        Assert.assertEquals(expectedBalance, actualBalance,0.0f);
     }
 ```
+@[7-10](if a rest request to the financialservice with at /balance/100 is made, it will return 100 as a response )
 
 
 ---
