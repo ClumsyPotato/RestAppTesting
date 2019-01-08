@@ -147,4 +147,4 @@ public void customerTest() throws Exception {
 
 ## Cycle
 
-![](assets/img/tdd.jpeg)
+![](assets/img/tdd.jpeg&size=50%)
