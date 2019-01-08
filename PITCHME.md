@@ -44,7 +44,7 @@ public class CustomerControllerTest {
 ```
 
 +++
-## UnitTest implementation
+## Unit Test implementation
 
 
 ```java
@@ -67,8 +67,10 @@ public void customerTest() throws Exception {
     }
 }
 ```
-@[4-6](darn)
-@[8-10](oiii)
+@[4-6](Create a stubbed request)
+@[8,9](Execute the request and safe it)
+@[11](Declare expected output)
+@[13,14](Compare the expected value to the actual result)
 
 
 
