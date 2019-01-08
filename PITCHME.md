@@ -10,8 +10,9 @@
 ## Simple GET Request 
 
 
+Implementation
 
-´´´java
+```java
 
 @RestController
 public class CustomerController {
@@ -25,9 +26,9 @@ public class CustomerController {
 
 ```
 
-hmm
+Test
 
-´´´java
+```java
 
 
 @RunWith(SpringRunner.class)
