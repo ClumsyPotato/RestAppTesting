@@ -147,4 +147,5 @@ public void customerTest() throws Exception {
 
 ## Cycle
 
-![](assets/img/logo.png)
+
+![](assets/img/presentation.png)
