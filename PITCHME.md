@@ -143,8 +143,5 @@ public void customerTest() throws Exception {
 
 ---
 ## Test Driven Development(DDD)
-+++
 
-## Cycle
-
-?image=assets/img/tdd.jpeg
++++?image=assets/img/tdd.jpeg&size=80%
