@@ -44,7 +44,7 @@ public class CustomerControllerTest {
 ```
 
 +++
-## Unit Test implementation
+## Unit Test Method
 
 
 ```java
@@ -69,19 +69,74 @@ public void customerTest() throws Exception {
 ```
 @[4-6](Create a stubbed request)
 @[8,9](Execute the request and safe it)
-@[11](Declare expected output)
-@[13,14](Compare the expected value to the actual result)
+@[11,12](Declare expected output)
+@[14,15](Compare the expected value to the actual result)
 
 
-
-
-+++
-##Moking a Service
-
-+++
-##Moking a Rest API
 
 
 ---
-##Test Driven Development(DDD)
+## Moking a Service
++++
+## Implementation
+
+``` java
+  @GetMapping("/Customer/name/{id}")
+  public String getCustomerName(@Pathvariable("id") long id){
+        return customerService.getCustomerName(id);
+    }
+
+```
+
+++
+##Unit Test Method
+
+```java
+ @Test
+    public void customerTest() throws Exception {
+        String expected = "Steve"
+        Mockito.when(customerService.getCustomerName(Mokito.anyLong())).thenReturn(expected);
+
+        RequestBuilder requestBuilder = MockMvcRequestBuilders.get(
+                "/Customer/name/2").accept(MediaType.APPLICATION_JSON);
+
+        MvcResult result = mockMvc.perform(requestBuilder).andReturn();
+
+        Assert.assertEquals(exptected,result.getResponse().getContentAsString());
+
+    }
+```
+
+---
+## Moking a Rest API
+
+``` java
+   public String getCustomerBalance(String id){
+        ResponseEntity<String> responseEntity = restTemplate.getForEntity("http://financialservice:8080/balance/"+id, String.class);
+        return responseEntity.getBody();
+    }
+```
+
+## Unit Test Method
+
+
+``` java
+    @Test
+    public void customerBalanceTest(){
+
+        String expectedBalance = "100";
+
+
+        Mockito
+                .when(restTemplate.getForEntity("http://financialservice:8080/balance/"+expectedBalance ,String.class))
+                .thenReturn(new ResponseEntity<>(expectedBalance, HttpStatus.OK));
+
+        String actualBalance =customerService.getCustomerBalance(expectedBalance);
+        Assert.assertEquals((expectedBalance), actualBalance);
+    }
+```
+
+
+---
+## Test Driven Development(DDD)
 
