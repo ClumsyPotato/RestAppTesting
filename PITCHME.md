@@ -147,4 +147,4 @@ public void customerTest() throws Exception {
 
 ## Cycle
 
-![](Dokumente/Code/Spring/assets/img/presentation.png)
+![](assets/img/presentation.png)
