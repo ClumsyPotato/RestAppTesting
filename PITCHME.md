@@ -44,6 +44,18 @@ public class CustomerControllerTest {
  @Test
     public void customerTest() throws Exception {
 
+    }
+}
+```
+
++++
+## UnitTest implementation
+
+
+```java
+@Test
+    public void customerTest() throws Exception {
+
         //Build request
         RequestBuilder requestBuilder = MockMvcRequestBuilders.get(
                 "/customer").accept(MediaType.APPLICATION_JSON);
@@ -60,12 +72,6 @@ public class CustomerControllerTest {
     }
 }
 ```
-
-+++
-## UnitMethod implementation
-
-
-
 
 
 
