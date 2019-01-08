@@ -19,7 +19,7 @@ public class CustomerController {
 
     @GetMapping("/customer")
     public String getCustomer(){
-        return "Customer";
+        return "Unique Customer";
     }
 
 }
@@ -27,7 +27,7 @@ public class CustomerController {
 ```
 +++
 
-## Simple Test
+## Test class
 
 ```java
 
@@ -44,14 +44,17 @@ public class CustomerControllerTest {
  @Test
     public void customerTest() throws Exception {
 
+        //Build request
         RequestBuilder requestBuilder = MockMvcRequestBuilders.get(
                 "/customer").accept(MediaType.APPLICATION_JSON);
 
+        // Execute Request
         MvcResult result = mockMvc.perform(requestBuilder).andReturn();
 
-        System.out.println(result.getResponse().getContentAsString());
-        String expected = "Customer";
+        //Execpted String
+        String expected = "Unique Customer";
 
+        //Check if result and expected output are the same
         Assert.assertEquals(expected,result.getResponse().getContentAsString());
 
     }
@@ -59,7 +62,11 @@ public class CustomerControllerTest {
 ```
 
 +++
-##GET Request with Path Variables
+## UnitMethod implementation
+
+
+
+
 
 
 +++
