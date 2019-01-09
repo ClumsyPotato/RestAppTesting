@@ -150,8 +150,11 @@ public void customerTest() throws Exception {
 +++?image=assets/img/tdd.jpeg&size=80%
 
 
-+++
+@snap[north-west] 
+@quote[Following TDD has not only allowed us to write simpler, more understandable code but has allowed us to think more about what we are implementing before actually implementing it.](Joe Birch, Senior Android Engineer at Buffer)@snapend
 
+
++++
 
 @snap[north-west] 
 @quote[Many mistake an investment in quality as something that lengthens the development process. At Spotify, we know that shipping high-quality code enables speed of iteration.](Nitzan Blouin, Director of Engineering at Spotify)@snapend
