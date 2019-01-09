@@ -149,6 +149,7 @@ public void customerTest() throws Exception {
 
 +++?image=assets/img/tdd.jpeg&size=80%
 
++++
 
 @snap[north-west] 
 @quote[Following TDD has not only allowed us to write simpler, more understandable code but has allowed us to think more about what we are implementing before actually implementing it.](Joe Birch, Senior Android Engineer at Buffer)@snapend
