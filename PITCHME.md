@@ -148,3 +148,10 @@ public void customerTest() throws Exception {
 ## Test Driven Development(DDD)
 
 +++?image=assets/img/tdd.jpeg&size=80%
+
+
++++
+
+ @quote[Many mistake an investment in quality as something that lengthens the development process. At Spotify, we know that shipping high-quality code enables speed of iteration.](Nitzan Blouin, Director of Engineering at Spotify)
+
+
